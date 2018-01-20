@@ -1,0 +1,29 @@
+{% set name = "csdms-permamodel-frostnumbergeo" %}
+{% set version = "0.1.1" %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  git_url: https://github.com/permamodel/permamodel
+  git_rev: v{{ version }}
+
+requirements:
+  build:
+    - babelizer
+    - permamodel
+  run:
+    - cca-tools
+    - permamodel
+
+test:
+  requires:
+    - pymt
+
+about:
+  home: http://csdms.colorado.edu/wiki/Model:Frost_Model
+  license: MIT
+  summary:
+    The geographic version of the Frost Number model from Permamodel.
+  dev_url: https://github.com/permamodel/permamodel
