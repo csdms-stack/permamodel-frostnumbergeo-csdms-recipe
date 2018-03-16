@@ -9,6 +9,9 @@ source:
   git_url: https://github.com/permamodel/permamodel
   git_rev: v{{ version }}
 
+build:
+  number: 1
+
 requirements:
   build:
     - babelizer
@@ -19,6 +22,7 @@ requirements:
 
 test:
   requires:
+    - netcdf-fortran=4.4.4=5 # [linux]
     - pymt
 
 about:
